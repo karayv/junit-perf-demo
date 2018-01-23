@@ -8,7 +8,7 @@ public class JUnit5Test {
     TestRunner testRunner = new TestRunner();
 
     @Test
-    public void test() {
+    void test() {
         testRunner.go(Assertions::assertTrue);
     }
 }
