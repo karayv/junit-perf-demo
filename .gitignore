@@ -1,0 +1,12 @@
+bin/
+build/
+
+.DS_Store
+
+# STS
+.classpath
+.project
+.settings
+.gradle
+
+
