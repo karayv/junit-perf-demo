@@ -6,25 +6,26 @@
  * user guide available at https://docs.gradle.org/4.3/userguide/java_library_plugin.html
  */
 
-// Apply the java-library plugin to add support for Java Library
-apply plugin: 'java-library'
+subprojects {
+	// Apply the java-library plugin to add support for Java Library
+	apply plugin: 'java-library'
 
-// In this section you declare where to find the dependencies of your project
-repositories {
-    // Use jcenter for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+	// In this section you declare where to find the dependencies of your project
+	repositories {
+	    // Use jcenter for resolving your dependencies.
+	    // You can declare any Maven/Ivy/file repository here.
+	    jcenter()
+	}
+
+	sourceCompatibility = 1.8
+
+	dependencies {
+	    // older JUnit
+	    testImplementation group: 'junit', name: 'junit', version: '4.12'
+
+	    // JUnit 5
+	    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: "5.${junit5MinorVersion}"
+	    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: "5.${junit5MinorVersion}"
+	    testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: "1.${junit5MinorVersion}"
+	}
 }
-
-sourceCompatibility = 1.8
-
-dependencies {
-    // older JUnit
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
-
-    // JUnit 5
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: "5.${junit5MinorVersion}"
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: "5.${junit5MinorVersion}"
-    testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: "1.${junit5MinorVersion}"
-}
-

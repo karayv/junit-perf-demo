@@ -1,0 +1,1 @@
+include "runner", "junit5-vs-4", "spring5-di"

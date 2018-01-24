@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class OldJUnitTest {
-    TestRunner testRunner = new TestRunner();
+    LoadRunner testRunner = new TestRunner();
 
     @Test
     public void test() {
