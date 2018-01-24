@@ -1,3 +1,6 @@
 dependencies {
-    compile project(':runner')
+    implementation project(':runner')
+    implementation group: 'org.springframework', name: 'spring-context', version: "${springVersion}"
+
+    testImplementation group: 'org.springframework', name: 'spring-test', version: "${springVersion}"
 }
